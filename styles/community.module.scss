@@ -1,0 +1,19 @@
+.container {
+  padding: 3rem;
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  max-width: 1080px;
+  max-height: 1920px;
+  .pos {
+    margin-top: 5rem;
+  }
+  .frends {
+    margin-top: 3rem;
+  }
+  .news {
+    margin-top: 8rem;
+  }
+}
