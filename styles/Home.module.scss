@@ -72,16 +72,16 @@
       }
 
       .heartBeat {
-        transform: translate(-1rem, 0);
+        transform: translate(-2.5rem, 0);
 
       }
 
       .tmp {
-        transform: translate(20rem, 0);
+        transform: translate(18rem, 0);
       }
 
       .figer {
-        transform: translate(42rem, -1rem);
+        transform: translate(41.5rem, -1rem);
         width: 200px;
       }
     }
@@ -108,11 +108,21 @@
 }
 
 .wifiSetting {
-  border: 1px #fff solid;
+  // border: 1px #fff solid;
   position: absolute;
   width: 100px;
   height: 100px;
+  right: 48px;
+  top:250px;
 
+}
+.videoBackDoor{
+  // border: 1px #fff solid;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 300px;
+  top:250px;
 }
 
 .videos {

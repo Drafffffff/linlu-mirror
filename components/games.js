@@ -9,7 +9,7 @@ let sr = 200;
 let er = 400;
 let mr = 300;
 let transflag = 0;
-export default ({addone}) => {
+export default function P5 ({addone})  {
 
     useEffect(() => {
         // const client = mqttConnect();
@@ -68,13 +68,13 @@ export default ({addone}) => {
 
             sr += (mr - sr) * 0.2
             if (p5.abs(mr - sr) < 0.0001) {
-                transflag = -1;
+                // transflag = -1;
             }
         } else if (transflag === 3) {
 
             sr += (er - sr) * 0.2
             if (p5.abs(er - sr) < 0.0001) {
-                transflag = -1;
+                transflag = 1;
             }
         }
         for (let a = 0; a < p5.TWO_PI; a += 0.01) {

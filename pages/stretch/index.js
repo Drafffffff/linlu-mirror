@@ -10,6 +10,7 @@ import mqtt from "mqtt";
 export default function Home() {
     const [state, setState] = useState("0")
     const router = useRouter()
+    const [c, setc] = useState(1);
     useEffect(() => {
         // const client = mqttConnect();
         const options = {
@@ -49,7 +50,12 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <TopBar title={"漾-Stretch"}/>
-            <div className={styles.connect}>
+            <div className={styles.connect} onclick={()=>{
+                 setc(c + 1)
+                 if (c > 5) {
+                     router.push("/video")
+                 }
+            }}>
                 {imgDisp(state)}
             </div>
 
