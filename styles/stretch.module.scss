@@ -4,6 +4,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  
   color: white;
   max-width: 1080px;
   max-height: 1920px;
@@ -32,7 +33,7 @@
   position: absolute;
   margin-top: 6rem;
   text-align: center;
-  bottom: -2px;
+  bottom: 0px;
   right: 0;
 }
 
@@ -58,6 +59,9 @@
   top: 0;
   left: 0;
   z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .gamePanel {
@@ -92,6 +96,9 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .timesbar {

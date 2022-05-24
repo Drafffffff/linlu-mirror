@@ -54,7 +54,9 @@ export default function Home() {
                 <div className={styles.times}>
                     {`00:${currentTime.toString().padStart(2, "0")}`}
                 </div>
-                <div className={styles.btnImg}>
+                <div className={styles.btnImg} onClick={()=>{
+                    router.push("/stretch/complete");
+                }}>
                     <Image src={require("/public/img/stretch/btn.png")} alt={"btn"}/>
                 </div>
                 {/*{times}*/}
