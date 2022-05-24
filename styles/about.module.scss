@@ -1,0 +1,65 @@
+.container {
+  padding: 3rem;
+  background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  max-width: 1080px;
+  max-height: 1920px;
+
+  .info {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .panel {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .btn1{
+    position: absolute;
+    //background-color: #fff;
+    width: 460px;
+    height: 150px;
+    top:610px;
+    left: 75px;
+  }
+  .btn2{
+    position: absolute;
+    width: 460px;
+    height: 150px;
+    top:610px;
+    right: 75px;
+  }
+  .settingbtn{
+    position: absolute; 
+    right: 90px;
+    top:220px;
+    //background-color: #fff;
+    width: 80px;
+    height: 80px;
+  }
+  .tagbtn{
+    position: absolute;
+    right: 90px;
+    top:410px;
+    width: 80px;
+    height: 80px;
+    //border: white 1px solid;
+  }
+}
+
+
+.setting{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.airtag{
+  text-align: center;
+  margin-top: 5rem;
+}
+

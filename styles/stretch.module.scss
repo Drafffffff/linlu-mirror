@@ -12,3 +12,49 @@
 .connect {
   margin-top: 40%;
 }
+
+
+.infoImg {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.startbtn {
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  //background-color: #fff;
+  top: 618px;
+  right: 120px;
+}
+
+.selectSport {
+  position: absolute;
+  margin-top: 6rem;
+  text-align: center;
+  bottom: -2px;
+  right: 0;
+}
+.countdown{
+  position: absolute;
+  top:450px;
+  right: 340px;
+  font-size: 10rem;
+
+}
+
+
+.sportbtn {
+  position: absolute;
+  width: 1000px;
+  height: 400px;
+  bottom: 450px;
+  right: 40px;
+}
+
+.readyimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}

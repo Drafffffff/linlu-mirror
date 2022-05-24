@@ -163,7 +163,7 @@ export function getLunar() {
 
 
 export function getTime() {
-    return `${moment().hour()}:${moment().minutes()}`;
+    return `${moment().format("hh:mm")}`;
 }
 
 export function getDate() {

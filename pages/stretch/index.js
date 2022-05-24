@@ -4,15 +4,16 @@ import styles from '../../styles/stretch.module.scss'
 import TopBar from "../../components/topbar";
 import {mqttConnect} from "../../components/utils";
 import {useEffect, useState} from "react";
+import {useRouter} from 'next/router'
 import mqtt from "mqtt";
 
 export default function Home() {
     const [state, setState] = useState("0")
+    const router = useRouter()
     useEffect(() => {
         // const client = mqttConnect();
         const options = {
             // Clean session
-
             clean: true,
             clientId: 'emqx_test',
             username: 'admin',
@@ -33,9 +34,13 @@ export default function Home() {
             console.log(topic, message.toString())
             if (topic === "topic" && message.toString() === "0") {
                 setState("1")
+                setTimeout(() => {
+                    router.push("/stretch/info")
+                }, 3000)
+                client.end()
             }
         })
-    }, [0])
+    }, [])
     return (
         <div className={styles.container}>
             <Head>
@@ -57,7 +62,7 @@ function imgDisp(a) {
         return <Image src={require("../../public/img/stretch/connect.png")} alt={"connnect1"}
         />
     } else if (a === "1") {
-        return <Image src={require("../../public/img/stretch/connect1.png")} alt={"connect1"}
+        return <Image src={require("../../public/img/stretch/connect3.png")} alt={"connect1"}
         />
     }
 }

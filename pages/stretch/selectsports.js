@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../../styles/about.module.scss'
+import styles from '../../styles/stretch.module.scss'
 import TopBar from "../../components/topbar";
+import {useRouter} from "next/router";
 
 // import {getLunar} from "../components/utils";
 
 export default function Home() {
-
+    const router = useRouter()
     return (
         <div className={styles.container}>
             <Head>
@@ -16,10 +17,14 @@ export default function Home() {
                 <meta name="viewport"
                       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
             </Head>
-            <TopBar title={"个性化设置"}/>
-            <div className={styles.setting}>
-                <Image src={require("/public/img/about/setting.png")} alt={"setting"}/>
+            <TopBar title={"S-SRETCHER"}/>
+            <div className={styles.selectSport}>
+                <Image src={require("/public/img/stretch/info/selectsport.png")} alt={"infoimg"}/>
             </div>
+            <div className={styles.sportbtn} onClick={() => {
+                router.push("/stretch/start")
+            }}/>
+
         </div>
     )
 }
