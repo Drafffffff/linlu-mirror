@@ -64,12 +64,14 @@
       position: absolute;
       transform: translate(6rem, -7.5rem);
       font-weight: bold;
+
       & > div {
         position: absolute;
         width: 5rem;
-        color:#00FFD1;
+        color: #00FFD1;
       }
-      .heartBeat{
+
+      .heartBeat {
         transform: translate(-1rem, 0);
 
       }
@@ -85,27 +87,38 @@
     }
   }
 
-  .menu{
+  .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 4rem;
-    &>div{
+
+    & > div {
       width: 50%;
     }
-    .products{
+
+    .products {
 
     }
-    .community{
+
+    .community {
 
     }
   }
 }
 
-.wifiSetting{
+.wifiSetting {
   border: 1px #fff solid;
   position: absolute;
   width: 100px;
   height: 100px;
 
+}
+
+.videos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
 }

@@ -29,10 +29,10 @@ export default function Home() {
         client.on('error', (error) => {
             console.log('连接失败:', error)
         })
-        client.subscribe("topic", {qos: 0})
+        client.subscribe("stretch", {qos: 0})
         client.on('message', (topic, message) => {
             console.log(topic, message.toString())
-            if (topic === "topic" && message.toString() === "0") {
+            if (topic === "stretch" && message.toString() === "0") {
                 setState("1")
                 setTimeout(() => {
                     router.push("/stretch/info")

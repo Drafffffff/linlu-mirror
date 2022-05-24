@@ -35,9 +35,10 @@
   bottom: -2px;
   right: 0;
 }
-.countdown{
+
+.countdown {
   position: absolute;
-  top:450px;
+  top: 450px;
   right: 340px;
   font-size: 10rem;
 
@@ -57,4 +58,46 @@
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.gamePanel {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 520px;
+  background-color: #101011;
+
+  .times {
+    font-size: 8rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 500;
+
+  }
+
+  .btnImg {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .timesbar {
+    display: flex;
+  }
+}
+
+.comp {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timesbar {
+  background-color: #fff;
+  height: 80px;
+  position: absolute;
+  //width: 100%;
+  bottom: 0;
 }

@@ -4,10 +4,39 @@ import styles from '../../styles/stretch.module.scss'
 import TopBar from "../../components/topbar";
 import {useRouter} from "next/router";
 
-// import {getLunar} from "../components/utils";
+import dynamic from "next/dynamic";
+import {useEffect, useRef, useState} from "react";
 
+const Game = dynamic(
+    () => import("/components/games"),
+    {ssr: false}
+)
 export default function Home() {
     const router = useRouter();
+    const [times, setTimes] = useState(0);
+    const [currentTime, setCurrentTime] = useState(30)
+    const addOne = () => {
+        console.log("200")
+        setTimes(pre => {
+            if (pre >= 4) {
+                router.push("/stretch/complete")
+            }
+            return pre + 1
+        })
+    }
+    useEffect(() => {
+        const ti = setInterval(() => {
+            setCurrentTime(pre => {
+                if (pre <= 0) {
+                    router.push("/stretch/complete")
+                }
+                return pre - 1
+            })
+        }, 1000)
+        return () => {
+            clearInterval(ti)
+        }
+    }, [])
     return (
         <div className={styles.container}>
             <Head>
@@ -18,8 +47,23 @@ export default function Home() {
                       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
             </Head>
             <TopBar title={"第一节：睡前拉伸"}/>
+            <Game addone={() => {
+                addOne()
+            }}/>
+            <div className={styles.gamePanel}>
+                <div className={styles.times}>
+                    {`00:${currentTime.toString().padStart(2, "0")}`}
+                </div>
+                <div className={styles.btnImg}>
+                    <Image src={require("/public/img/stretch/btn.png")} alt={"btn"}/>
+                </div>
+                {/*{times}*/}
+                <div className={styles.timesbar} style={{width: `${times * 20}%`}}>
 
-
+                </div>
+            </div>
         </div>
     )
 }
+
+
