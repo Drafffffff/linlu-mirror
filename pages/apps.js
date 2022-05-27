@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/app.module.scss'
 import Topbar from "../components/topbar"
 import Link from "next/link";
+import OverTime from "../components/OverTime";
 
 export default function Home() {
 
@@ -34,6 +35,8 @@ export default function Home() {
 
                 </div>
             </div>
+            <OverTime/>
+
         </div>
     )
 }

@@ -4,6 +4,7 @@ import styles from '../../styles/about.module.scss'
 import TopBar from "../../components/topbar";
 import {useState} from "react";
 import {useRouter} from "next/router";
+import OverTime from "../../components/OverTime";
 
 export default function Home() {
     const [panelState, setpanelState] = useState(0);
@@ -37,6 +38,8 @@ export default function Home() {
             <div className={styles.tagbtn} onClick={() => {
                 router.push("/about/airtag");
             }}/>
+            <OverTime/>
+
         </div>
     )
 }

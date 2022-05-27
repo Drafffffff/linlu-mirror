@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/about.module.scss'
 import TopBar from "../../components/topbar";
+import OverTime from "../../components/OverTime";
 
 // import {getLunar} from "../components/utils";
 
@@ -20,6 +21,8 @@ export default function Home() {
             <div className={styles.setting}>
                 <Image src={require("/public/img/about/setting.png")} alt={"setting"}/>
             </div>
+            <OverTime/>
+
         </div>
     )
 }

@@ -22,7 +22,7 @@ export default function Home() {
     }, 1000)
     useEffect(() => {
         if (countdown === 0) {
-            // router.push("/stretch/game")
+            router.push("/stretch/game")
 
         }
     }, [countdown])

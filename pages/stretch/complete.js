@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../../styles/stretch.module.scss'
 import TopBar from "../../components/topbar";
 import {useRouter} from "next/router";
+import OverTime from "../../components/OverTime";
 
 export default function Home() {
     const router = useRouter()
@@ -16,11 +17,13 @@ export default function Home() {
                       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
             </Head>
             <TopBar title={"S-SRETCHER"}/>
-            <div className={styles.comp} onClick={()=>{
+            <div className={styles.comp} onClick={() => {
                 router.push("/")
             }}>
                 <Image src={require("/public/img/stretch/comp.png")} alt={"comp"}/>
             </div>
+            <OverTime/>
+
         </div>
     )
 }

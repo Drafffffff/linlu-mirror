@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/login.module.scss'
 import {useRouter} from "next/router";
+import OverTime from "../../components/OverTime";
 
 
 export default function Home() {
@@ -19,6 +20,8 @@ const router = useRouter()
             }}>
                 <Image src={require("/public/img/login/wifiSelect.png")} alt={"wifi"}/>
             </div>
+            <OverTime/>
+
         </div>
     )
 }

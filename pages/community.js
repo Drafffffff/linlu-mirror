@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/community.module.scss'
 import {getLunar} from "../components/utils";
 import TopBar from "../components/topbar";
+import OverTime from "../components/OverTime";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
             <div className={styles.news}>
                 <Image src={require("../public/img/community/news.png")} alt={"news"}/>
             </div>
+            <OverTime/>
         </div>
     )
 }

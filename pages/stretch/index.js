@@ -6,6 +6,7 @@ import {mqttConnect} from "../../components/utils";
 import {useEffect, useState} from "react";
 import {useRouter} from 'next/router'
 import mqtt from "mqtt";
+import OverTime from "../../components/OverTime";
 
 export default function Home() {
     const [state, setState] = useState("0")
@@ -50,14 +51,15 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <TopBar title={"漾-Stretch"}/>
-            <div className={styles.connect} onClick={()=>{
-                 setc(c + 1)
-                 if (c > 5) {
-                     router.push("/stretch/info")
-                 }
+            <div className={styles.connect} onClick={() => {
+                setc(c + 1)
+                if (c > 5) {
+                    router.push("/stretch/info")
+                }
             }}>
                 {imgDisp(state)}
             </div>
+            <OverTime/>
 
         </div>
     )

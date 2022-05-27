@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../../styles/stretch.module.scss'
 import TopBar from "../../components/topbar";
 import {useRouter} from "next/router";
+import OverTime from "../../components/OverTime";
 
 // import {getLunar} from "../components/utils";
 
@@ -24,6 +25,7 @@ export default function Home() {
             <div className={styles.sportbtn} onClick={() => {
                 router.push("/stretch/start")
             }}/>
+            <OverTime/>
 
         </div>
     )

@@ -6,6 +6,7 @@ import {useRouter} from "next/router";
 
 import dynamic from "next/dynamic";
 import {useEffect, useRef, useState} from "react";
+import OverTime from "../../components/OverTime";
 
 const Game = dynamic(
     () => import("/components/games"),
@@ -19,7 +20,9 @@ export default function Home() {
         console.log("200")
         setTimes(pre => {
             if (pre >= 4) {
-                router.push("/stretch/complete")
+                setTimeout(() => {
+                    router.push("/stretch/complete")
+                }, 1000)
             }
             return pre + 1
         })
@@ -54,7 +57,7 @@ export default function Home() {
                 <div className={styles.times}>
                     {`00:${currentTime.toString().padStart(2, "0")}`}
                 </div>
-                <div className={styles.btnImg} onClick={()=>{
+                <div className={styles.btnImg} onClick={() => {
                     router.push("/stretch/complete");
                 }}>
                     <Image src={require("/public/img/stretch/btn.png")} alt={"btn"}/>
@@ -64,6 +67,8 @@ export default function Home() {
 
                 </div>
             </div>
+            <OverTime/>
+
         </div>
     )
 }

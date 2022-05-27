@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  
+
   color: white;
   max-width: 1080px;
   max-height: 1920px;
@@ -96,13 +96,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   overflow: hidden;
 }
 
 .timesbar {
-  background-color: #fff;
+  background: linear-gradient(to right, #68bb57, #00b994);
   height: 80px;
   position: absolute;
   //width: 100%;
