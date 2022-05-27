@@ -11,6 +11,7 @@ export default function Home() {
     const router = useRouter()
     const [countdown, setcountdown] = useState(3)
     const timeRef = useRef()
+
     timeRef.current = setInterval(() => {
         if (countdown === 0) {
             clearInterval(timeRef.current);
@@ -21,10 +22,17 @@ export default function Home() {
     }, 1000)
     useEffect(() => {
         if (countdown === 0) {
-            router.push("/stretch/game")
+            // router.push("/stretch/game")
 
         }
     }, [countdown])
+    useEffect(() => {
+        // let audio = new Audio(require("/public/audio/count.mp3"))
+        // console.log(audio)
+        // audio.play()
+
+
+    }, [])
     return (
         <div className={styles.container}>
             <Head>
@@ -41,7 +49,7 @@ export default function Home() {
             <div className={styles.countdown}>
                 {countdown}
             </div>
-
+            {/*<iframe src={require("/public/audio/count.mp3").default.src} allow="autoplay" id="audio" style={{display: "none"}}/>*/}
         </div>
     )
 }

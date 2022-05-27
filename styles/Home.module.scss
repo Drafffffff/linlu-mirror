@@ -113,16 +113,17 @@
   width: 100px;
   height: 100px;
   right: 48px;
-  top:250px;
+  top: 250px;
 
 }
-.videoBackDoor{
+
+.videoBackDoor {
   // border: 1px #fff solid;
   position: absolute;
   width: 100px;
   height: 100px;
   right: 300px;
-  top:250px;
+  top: 250px;
 }
 
 .videos {
@@ -131,4 +132,14 @@
   left: 0;
   width: 1080px;
   height: 1920px;
+}
+
+
+.videoBack {
+  position: absolute;
+  top: 800px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border: white 1px solid;
 }

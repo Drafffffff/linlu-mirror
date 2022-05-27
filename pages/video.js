@@ -4,9 +4,11 @@ import styles from '../styles/Home.module.scss'
 import {getDate, getLunar, getTime} from "../components/utils";
 
 import {useRouter} from "next/router";
+import {useState} from "react";
 
 export default function Home() {
     const router = useRouter();
+    const [c, setc] = useState(2);
     return (
         <div className={styles.container}>
             <Head>
@@ -18,7 +20,12 @@ export default function Home() {
             </Head>
             < video src={require('/public/video.mp4')} width={1080} height={1920} loop autoPlay
                     className={styles.videos}/>
-
-            </div>
+            <div className={styles.videoBack} onClick={() => {
+                setc(c + 1)
+                if (c > 3) {
+                    router.push("/")
+                }
+            }}/>
+        </div>
     )
 }
