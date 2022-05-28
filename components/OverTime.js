@@ -30,6 +30,8 @@ export default function OverTime() {
                 router.push("/danger")
             } else if (topic === "stretch" && message.toString() === "111") {
                 router.push("/")
+            } else if (topic === "stretch" && message.toString() === "222") {
+                router.push("/video")
             }
         })
 

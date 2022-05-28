@@ -5,6 +5,7 @@ import {getDate, getLunar, getTime} from "../components/utils";
 
 import {useRouter} from "next/router";
 import {useState} from "react";
+import OverTime from "../components/OverTime";
 
 export default function Home() {
     const router = useRouter();
@@ -26,6 +27,7 @@ export default function Home() {
                     router.push("/")
                 }
             }}/>
+            <OverTime/>
         </div>
     )
 }
