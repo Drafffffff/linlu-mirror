@@ -1,11 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/danger.module.scss'
 import {getLunar} from "../components/utils";
 import OverTime from "../components/OverTime";
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 export default function Home() {
+    const router = useRouter();
+    const [imageStatus, setImageStatus] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setImageStatus(p => {
+                if (p === 3) {
+                    router.push("/")
+                }
+                console.log(p)
+                return p + 1
+            })
+        }, 3000)
 
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
     return (
         <div className={styles.container}>
             <Head>
@@ -16,7 +34,21 @@ export default function Home() {
                       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"/>
             </Head>
             <OverTime/>
-
+            <div className={styles.image}>
+                {changeImage(imageStatus)}
+            </div>
         </div>
     )
+}
+
+
+function changeImage(imageStatus) {
+    if (imageStatus === 0) {
+        return <Image src={require("/public/img/danger/danger1.png")} alt={"1"} className={styles.img}/>
+    } else if (imageStatus === 1) {
+        return <Image src={require("/public/img/danger/danger2.png")} alt={"1"} className={styles.img}/>
+    } else {
+        return <Image src={require("/public/img/danger/danger3.png")} alt={"1"} className={styles.img}/>
+
+    }
 }

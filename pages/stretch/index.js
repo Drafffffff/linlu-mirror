@@ -42,6 +42,11 @@ export default function Home() {
                 client.end()
             }
         })
+
+
+        return () => {
+            client.end()
+        }
     }, [])
     return (
         <div className={styles.container}>
