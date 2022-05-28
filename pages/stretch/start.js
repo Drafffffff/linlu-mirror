@@ -53,7 +53,9 @@ export default function Home() {
             <div className={styles.countdown}>
                 {countdown}
             </div>
-            <P5a/>
+
+            < video src={require('/public/audio/count.mp3').default.src} autoPlay/>
+
             {/*<iframe src={require("/public/audio/count.mp3").default.src} allow="autoplay" id="audio" style={{display: "none"}}/>*/}
         </div>
     )
