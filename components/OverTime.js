@@ -25,7 +25,7 @@ export default function OverTime() {
         client.on('message', (topic, message) => {
             console.log(topic, message.toString())
             if (topic === "stretch" && message.toString() === "0") {
-                router.push("/stretch/info")
+                router.push("/stretch/index2")
             } else if (topic === "stretch" && message.toString() === "100") {
                 router.push("/danger")
             } else if (topic === "stretch" && message.toString() === "111") {

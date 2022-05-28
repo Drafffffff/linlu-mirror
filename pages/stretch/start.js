@@ -5,8 +5,12 @@ import TopBar from "../../components/topbar";
 import {useRouter} from "next/router";
 import {gsap} from "gsap";
 import {useEffect, useRef, useState} from "react";
+import dynamic from "next/dynamic";
 // import {getLunar} from "../components/utils";
-
+const P5a = dynamic(
+    () => import("/components/P5audio"),
+    {ssr: false}
+)
 export default function Home() {
     const router = useRouter()
     const [countdown, setcountdown] = useState(3)
@@ -49,6 +53,7 @@ export default function Home() {
             <div className={styles.countdown}>
                 {countdown}
             </div>
+            <P5a/>
             {/*<iframe src={require("/public/audio/count.mp3").default.src} allow="autoplay" id="audio" style={{display: "none"}}/>*/}
         </div>
     )
