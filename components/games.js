@@ -36,11 +36,13 @@ export default function P5({addone}) {
             if (topic === "stretch" && message.toString() === "1") {
                 transflag = 1;
             } else if (topic === "stretch" && message.toString() === "2") {
-                transflag = 2;
-            } else if (topic === "stretch" && message.toString() === "3") {
-                transflag = 3;
+                transflag = 3   ;
                 addone();
+
             }
+            // else if (topic === "stretch" && message.toString() === "3") {
+            //     transflag = 3;
+            // }
         })
         return () => {
             client.end()
