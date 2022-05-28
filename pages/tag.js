@@ -15,7 +15,7 @@ export default function Home() {
         const options = {
             // Clean session
             clean: true,
-            clientId: 'emqx_test',
+            clientId: 'emqx_tsdfsdtag',
             username: 'admin',
             password: 'pubilc',
             reconnectPeriod: 1000,
@@ -29,9 +29,17 @@ export default function Home() {
     }, [])
 
 
-    function sendCmd() {
+    function send100() {
         client.publish('stretch', '100')
     }
+    function send111() {
+        client.publish('stretch', '111')
+    }
+    function send222() {
+        client.publish('stretch', '222')
+    }
+
+
 
     return (
         <div style={{display: "flex", justifyContent: "center", alignItems: "center", height: "100vh"}}>
@@ -42,8 +50,17 @@ export default function Home() {
             </Head>
 
             <button onClick={() => {
-                sendCmd()
-            }} style={{width: "300px", height: "400px"}}>asdasdasdsd
+                send100()
+            }} style={{width: "200px", height: "100px"}}>100
+            </button>
+
+            <button onClick={() => {
+                send111()
+            }} style={{width: "200px", height: "100px"}}>111
+            </button>
+            <button onClick={() => {
+                send222()
+            }} style={{width: "200px", height: "100px"}}>222
             </button>
 
 
