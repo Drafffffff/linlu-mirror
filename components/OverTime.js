@@ -20,7 +20,7 @@ export default function OverTime() {
         const timeOut = setTimeout(() => {
             router.push("/video")
         }, 900000)
-
+2
         client.subscribe("stretch", {qos: 0})
         client.on('message', (topic, message) => {
             console.log(topic, message.toString())
@@ -28,6 +28,7 @@ export default function OverTime() {
                 router.push("/stretch/index2")
             } else if (topic === "stretch" && message.toString() === "100") {
                 router.push("/danger")
+                console.log(message)
             } else if (topic === "stretch" && message.toString() === "111") {
                 router.push("/")
             } else if (topic === "stretch" && message.toString() === "222") {
