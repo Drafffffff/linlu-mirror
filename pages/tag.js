@@ -51,16 +51,16 @@ export default function Home() {
 
             <button onClick={() => {
                 send100()
-            }} style={{width: "200px", height: "100px"}}>100
+            }} style={{width: "200px", height: "100px"}}>baojinbg
             </button>
 
             <button onClick={() => {
                 send111()
-            }} style={{width: "200px", height: "100px"}}>111
+            }} style={{width: "200px", height: "100px"}}>shouye
             </button>
             <button onClick={() => {
                 send222()
-            }} style={{width: "200px", height: "100px"}}>222
+            }} style={{width: "200px", height: "100px"}}>shipin
             </button>
 
 
